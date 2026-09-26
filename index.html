@@ -1,1 +1,186 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chevrolet Vintage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+
+        <nav class="navegacao">
+
+            <button class="botao-menu" aria-label="Abrir menu">
+                ☰
+            </button>
+
+            <a href="#veiculos">Veículos</a>
+
+            <a href="#comprar">Comprar</a>
+
+        </nav>
+
+
+        <a href="#" class="logo">
+            <img
+                src="img/logo-chevrolet.png"
+                alt="Logo Chevrolet">
+        </a>
+
+
+        <div class="acoes">
+
+            <a href="#contato">
+                Entrar
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Área principal -->
+        <section class="hero">
+
+            <img
+                class="hero-imagem"
+                src="img/chevrolet-vintage.jpg"
+                alt="Carro Chevrolet clássico em ambiente escuro">
+
+            <div class="hero-conteudo">
+
+                <p>
+                    Chevrolet Vintage
+                </p>
+
+                <h1>
+                    Algumas paixões nunca são ultrapassadas
+                </h1>
+
+            </div>
+
+        </section>
+
+
+        <!-- Conteúdo abaixo da imagem -->
+        <section class="introducao" id="veiculos">
+
+            <div class="introducao-conteudo">
+
+                <h2>
+                    Chevrolet Vintage
+                </h2>
+
+                <p>
+                    Algumas histórias permanecem vivas através do tempo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Área de contato -->
+        <section class="contato" id="contato">
+
+            <div class="contato-conteudo">
+
+                <h2>
+                    Entre em contato
+                </h2>
+
+                <p>
+                    Preencha o formulário para saber mais.
+                </p>
+
+
+                <form>
+
+                    <div class="campo">
+
+                        <label for="nome">
+                            Nome
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="mensagem">
+                            Mensagem
+                        </label>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            placeholder="Digite sua mensagem"
+                            rows="5">
+                        </textarea>
+
+                    </div>
+
+
+                    <button type="submit">
+                        Enviar
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé personalizado -->
+    <footer class="rodape">
+
+        <p>
+            Projeto acadêmico desenvolvido por Igor Gonzatto
+        </p>
+
+        <p>
+            Página inspirada no Chevrolet Vintage
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
