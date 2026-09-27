@@ -142,4 +142,109 @@ body {
     z-index: 1;
 }
 
+/* Seção Comprar */
 
+.comprar {
+    background-color: #f5f1e8;
+
+    color: #111;
+
+    padding: 70px 8%;
+}
+
+.comprar-conteudo {
+    max-width: 700px;
+}
+
+.comprar-conteudo p {
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+.comprar-conteudo h2 {
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+/* Formulário */
+
+.contato {
+    background-color: #111;
+
+    color: #fff;
+
+    padding: 70px 8%;
+}
+
+.contato-conteudo {
+    max-width: 600px;
+}
+
+.contato h2 {
+    font-size: 36px;
+
+    margin-bottom: 30px;
+}
+
+.contato form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.campo input,
+.campo textarea {
+    padding: 12px;
+
+    border: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+}
+
+.contato button {
+    margin-top: 10px;
+
+    padding: 12px;
+
+    border: none;
+
+    background-color: #fff;
+
+    color: #111;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.contato button:hover {
+    background-color: #ddd;
+}
+
+/* Rodapé */
+
+.rodape {
+    background-color: #000;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 14px;
+}
