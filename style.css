@@ -56,3 +56,20 @@ body {
 
     cursor: pointer;
 }
+
+/* Logo */
+
+.logo {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+
+    display: block;
+}
