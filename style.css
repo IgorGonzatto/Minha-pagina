@@ -73,3 +73,25 @@ body {
 
     display: block;
 }
+
+
+/* Área principal */
+
+.hero {
+    position: relative;
+
+    height: 610px;
+
+    overflow: hidden;
+}
+
+.hero-imagem {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
