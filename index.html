@@ -1,10 +1,14 @@
-    <!-- Eu deixei comentadas as etapas do trabalho para melhor localizacao minha e para ficar mais facil trabalhar na pagina-->
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Projeto acadêmico inspirado na página Chevrolet Vintage, desenvolvido com HTML e CSS."
+    >
 
     <title>Chevrolet Vintage</title>
 
@@ -16,28 +20,22 @@
     <!-- Cabeçalho -->
     <header class="cabecalho">
 
-        <nav class="navegacao">
-
-            <button class="botao-menu" aria-label="Abrir menu">
-                ☰
-            </button>
-
+        <nav class="navegacao" aria-label="Navegação principal">
             <a href="#veiculos">Veículos</a>
-
             <a href="#comprar">Comprar</a>
-
             <a href="#contato">Fale Conosco</a>
-
         </nav>
 
         <!-- Logo Chevrolet -->
-        <a href="#" class="logo">
-
-            <img src="assets/Chevrolet.png" alt="Logo Chevrolet">
-
+        <a href="#" class="logo" aria-label="Página inicial Chevrolet Vintage">
+            <img
+                src="assets/Chevrolet.png"
+                alt="Logo da Chevrolet"
+            >
         </a>
 
     </header>
+
 
     <!-- Conteúdo principal -->
     <main>
@@ -47,14 +45,13 @@
 
             <img
                 src="assets/Opala.png"
-                alt="Carro Chevrolet clássico"
-                class="hero-imagem">
+                alt="Carro Chevrolet clássico Opala"
+                class="hero-imagem"
+            >
 
             <div class="hero-conteudo">
 
-                <p>
-                    Chevrolet Vintage
-                </p>
+                <p>Chevrolet Vintage</p>
 
                 <h1>
                     Algumas paixões nunca são ultrapassadas
@@ -68,67 +65,67 @@
         <!-- Seção de compra -->
         <section class="comprar" id="comprar">
 
-    <div class="comprar-conteudo">
+            <div class="comprar-conteudo">
 
-        <h2>
-            O melhor dos carros clássicos com a chancela da
-            General Motors
-        </h2>
+                <h2>
+                    O melhor dos carros clássicos com a chancela da General Motors
+                </h2>
 
-        <p>
-            Como parte das comemorações dos 100 anos no Brasil, a Chevrolet irá restaurar 10 modelos históricos.
-            Uma iniciativa única na indústria automotiva brasileira!
-        </p>
+                <p>
+                    Como parte das comemorações dos 100 anos no Brasil,
+                    a Chevrolet irá restaurar 10 modelos históricos.
+                    Uma iniciativa única na indústria automotiva brasileira!
+                </p>
 
-        <p>
-            Vintage nasce para honrar o legado de ícones e disponibilizá-los de forma inédita no País.
-        </p>
+                <p>
+                    Vintage nasce para honrar o legado de ícones
+                    e disponibilizá-los de forma inédita no País.
+                </p>
 
-    </div>
+            </div>
 
-</section>
+        </section>
 
-<!-- Seção sobre o Chevrolet Vintage -->
-<section class="sobre-vintage">
 
-    <img
-        src="assets/Vintage.png"
-        alt="Opala, Omega, S10 e Monza, carros clássicos da Chevrolet Vintage">
+        <!-- Seção sobre o Chevrolet Vintage -->
+        <section class="sobre-vintage">
 
-    <div class="sobre-vintage-conteudo">
+            <img
+                src="assets/Vintage.png"
+                alt="Opala, Omega, S10 e Monza, carros clássicos da Chevrolet Vintage"
+            >
 
-        <p>
-            O Chevrolet Vintage celebra o passado com o rigor e a paixão
-            de quem o construiu. Mais do que restaurar carros clássicos,
-            estamos inaugurando no Brasil um novo conceito de curadoria
-            com projetos chancelados pelo próprio fabricante.
-        </p>
+            <div class="sobre-vintage-conteudo">
 
-        <p>
-            Cada um dos modelos selecionados para o programa é tratado
-            como uma obra única, conduzida por especialistas que dominam
-            a história e a essência da Chevrolet, em um processo artesanal
-            que termina onde tudo começou: no Campo de Provas da General Motors.
-        </p>
+                <p>
+                    O Chevrolet Vintage celebra o passado com o rigor e a paixão
+                    de quem o construiu. Mais do que restaurar carros clássicos,
+                    estamos inaugurando no Brasil um novo conceito de curadoria
+                    com projetos chancelados pelo próprio fabricante.
+                </p>
 
-    </div>
+                <p>
+                    Cada um dos modelos selecionados para o programa é tratado
+                    como uma obra única, conduzida por especialistas que dominam
+                    a história e a essência da Chevrolet, em um processo artesanal
+                    que termina onde tudo começou: no Campo de Provas da General Motors.
+                </p>
 
-</section>
+            </div>
+
+        </section>
+
 
         <!-- Formulário de contato -->
         <section class="contato" id="contato">
 
             <div class="contato-conteudo">
 
-                <p>
-                    Fale Conosco
-                </p>
+                <p>Fale Conosco</p>
 
-                <h2>
-                    Entre em contato
-                </h2>
+                <h2>Entre em contato</h2>
 
-                <form>
+                <form action="#" method="post">
 
                     <div class="campo">
 
@@ -141,7 +138,9 @@
                             id="nome"
                             name="nome"
                             placeholder="Digite seu nome"
-                            required>
+                            autocomplete="name"
+                            required
+                        >
 
                     </div>
 
@@ -157,7 +156,9 @@
                             id="email"
                             name="email"
                             placeholder="Digite seu e-mail"
-                            required>
+                            autocomplete="email"
+                            required
+                        >
 
                     </div>
 
@@ -172,7 +173,8 @@
                             id="mensagem"
                             name="mensagem"
                             placeholder="Digite sua mensagem"
-                            rows="5"></textarea>
+                            rows="5"
+                        ></textarea>
 
                     </div>
 
@@ -190,15 +192,15 @@
     </main>
 
 
-    <!-- Rodapé -->
+    <!-- Rodapé personalizado -->
     <footer class="rodape">
 
         <p>
-            Projeto acadêmico desenvolvido por Igor Gonzatto
+            Projeto acadêmico desenvolvido por Igor Gonzatto.
         </p>
 
         <p>
-            Página inspirada no Chevrolet Vintage
+            Página inspirada no Chevrolet Vintage.
         </p>
 
     </footer>
