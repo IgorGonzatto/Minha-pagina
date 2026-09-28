@@ -56,7 +56,35 @@ body {
 
     cursor: pointer;
 }
+.navegacao a {
+    color: #222;
+    text-decoration: none;
 
+    font-size: 16px;
+    font-weight: 600;
+
+    position: relative;
+}
+
+.navegacao a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #222;
+
+    transition: width 0.2s ease;
+}
+
+.navegacao a:hover::after {
+    width: 100%;
+}
 /* Logo */
 
 .logo {
@@ -180,6 +208,38 @@ body {
     margin: 0 auto;
 
     max-width: 1650px;
+}
+
+/* Seção sobre o Chevrolet Vintage */
+
+.sobre-vintage {
+    background-color: #f8f3e8;
+
+    color: #222;
+
+    padding: 70px 8%;
+}
+
+.sobre-vintage img {
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 50px;
+}
+
+.sobre-vintage-conteudo {
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.sobre-vintage-conteudo p {
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
 }
 
 /* Formulário */
