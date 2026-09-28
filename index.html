@@ -36,7 +36,6 @@
 
     </header>
 
-
     <!-- Conteúdo principal -->
     <main>
 
@@ -86,7 +85,6 @@
 
         </section>
 
-
         <!-- Seção sobre o Chevrolet Vintage -->
         <section class="sobre-vintage">
 
@@ -114,7 +112,6 @@
             </div>
 
         </section>
-
 
         <!-- Formulário de contato -->
         <section class="contato" id="contato">
@@ -185,12 +182,16 @@
 
                 </form>
 
+                <!-- Feedback exibido pelo JavaScript após o envio -->
+                <p class="mensagem-feedback" role="alert" aria-live="polite">
+                    Mensagem enviada com sucesso! Entraremos em contato em breve.
+                </p>
+
             </div>
 
         </section>
 
     </main>
-
 
     <!-- Rodapé personalizado -->
     <footer class="rodape">
@@ -204,6 +205,27 @@
         </p>
 
     </footer>
+
+    <script>
+        // Intercepta o envio do formulário e exibe feedback sem recarregar a página
+        const formulario = document.querySelector('.contato form');
+        const feedback  = document.querySelector('.mensagem-feedback');
+
+        formulario.addEventListener('submit', function (evento) {
+            evento.preventDefault(); // impede o recarregamento da página
+
+            // Exibe a mensagem de confirmação
+            feedback.style.display = 'block';
+
+            // Limpa os campos após o envio
+            formulario.reset();
+
+            // Esconde o feedback após 5 segundos
+            setTimeout(function () {
+                feedback.style.display = 'none';
+            }, 5000);
+        });
+    </script>
 
 </body>
 

@@ -1,4 +1,19 @@
-/* Configurações básicas */
+/* Variáveis CSS */
+
+:root {
+    --cor-fundo-claro: #f8f3e8;
+    --cor-fundo-escuro: #111;
+    --cor-fundo-preto: #000;
+    --cor-texto-escuro: #222;
+    --cor-texto-claro: #fff;
+    --cor-hover: #555;
+    --cor-botao-hover: #ddd;
+    --fonte-base: Arial, Helvetica, sans-serif;
+    --espacamento-lateral: 6%;
+    --transicao-padrao: 0.2s ease;
+}
+
+/* Reset e base */
 
 * {
     margin: 0;
@@ -7,99 +22,63 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #000;
-    color: #fff;
+    font-family: var(--fonte-base);
+    background-color: var(--cor-fundo-preto);
+    color: var(--cor-texto-claro);
 }
 
 
 /* Cabeçalho */
 
 .cabecalho {
-    height: 94px;
     background-color: #f5f5f5;
-
+    padding: 16px var(--espacamento-lateral);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-
-    padding: 0 40px;
-
+    gap: 14px;
     position: relative;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
 }
 
 .navegacao {
     display: flex;
-    align-items: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
 }
 
 .navegacao a {
-    color: #222;
+    color: var(--cor-texto-escuro);
     text-decoration: none;
-
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-}
-
-.navegacao a:hover {
-    color: #555;
-}
-
-.botao-menu {
-    background: none;
-    border: none;
-
-    font-size: 25px;
-
-    color: #222;
-
-    cursor: pointer;
-}
-.navegacao a {
-    color: #222;
-    text-decoration: none;
-
-    font-size: 16px;
-    font-weight: 600;
-
     position: relative;
 }
 
+/* Sublinhado animado nos links */
 .navegacao a::after {
     content: "";
-
     position: absolute;
-
     left: 0;
-    bottom: -6px;
-
+    bottom: -4px;
     width: 0;
     height: 2px;
+    background-color: var(--cor-texto-escuro);
+    transition: width var(--transicao-padrao);
+}
 
-    background-color: #222;
-
-    transition: width 0.2s ease;
+.navegacao a:hover {
+    color: var(--cor-hover);
 }
 
 .navegacao a:hover::after {
     width: 100%;
-}
-/* Logo */
-
-.logo {
-    position: absolute;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-}
-
-.logo img {
-    width: 100px;
-    height: auto;
-
-    display: block;
 }
 
 
@@ -107,218 +86,309 @@ body {
 
 .hero {
     position: relative;
-
-    height: 610px;
-
+    height: 320px;
     overflow: hidden;
 }
 
 .hero-imagem {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     display: block;
 }
 
-
-/* Texto da área principal */
+/* Escurecimento da imagem */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
 
 .hero-conteudo {
     position: absolute;
-
-    top: 40px;
-    left: 8%;
-
-    max-width: 900px;
-
-    color: #fff;
-
+    top: 24px;
+    left: var(--espacamento-lateral);
+    max-width: 90%;
+    color: var(--cor-texto-claro);
     z-index: 2;
 }
 
 .hero-conteudo p {
-    font-size: 28px;
-
-    margin-bottom: 5px;
+    font-size: 16px;
+    margin-bottom: 6px;
 }
 
 .hero-conteudo h1 {
-    font-size: 46px;
-
+    font-size: 26px;
     font-weight: 400;
-
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
-/* Escurecimento da imagem */
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.55);
-
-    z-index: 1;
-}
 
 /* Seção Comprar */
 
 .comprar {
-    background-color: #f8f3e8;
-
-    color: #222;
-
-    padding: 90px 8%;
-
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-escuro);
+    padding: 50px var(--espacamento-lateral);
     text-align: center;
 }
 
 .comprar-conteudo {
     max-width: 1700px;
-
     margin: 0 auto;
 }
 
 .comprar-conteudo h2 {
-    font-size: 52px;
-
+    font-size: 28px;
     font-weight: 500;
-
-    line-height: 1.05;
-
-    margin-bottom: 35px;
+    line-height: 1.15;
+    margin-bottom: 20px;
 }
 
 .comprar-conteudo p {
-    font-size: 20px;
-
+    font-size: 16px;
     font-weight: 600;
-
-    line-height: 1.5;
-
-    margin: 0 auto;
-
-    max-width: 1650px;
+    line-height: 1.6;
+    margin-bottom: 12px;
 }
+
+/* Último parágrafo sem margem inferior */
+.comprar-conteudo p:last-child {
+    margin-bottom: 0;
+}
+
 
 /* Seção sobre o Chevrolet Vintage */
 
 .sobre-vintage {
-    background-color: #f8f3e8;
-
-    color: #222;
-
-    padding: 70px 8%;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-escuro);
+    padding: 40px var(--espacamento-lateral);
 }
 
 .sobre-vintage img {
     width: 100%;
-
     display: block;
-
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .sobre-vintage-conteudo {
     max-width: 1200px;
-
     margin: 0 auto;
 }
 
 .sobre-vintage-conteudo p {
-    font-size: 20px;
-
-    line-height: 1.6;
-
-    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 
-/* Formulário */
+.sobre-vintage-conteudo p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Formulário de contato */
 
 .contato {
-    background-color: #111;
-
-    color: #fff;
-
-    padding: 70px 8%;
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-claro);
+    padding: 50px var(--espacamento-lateral);
 }
 
 .contato-conteudo {
     max-width: 600px;
 }
 
-.contato h2 {
-    font-size: 36px;
+.contato > .contato-conteudo > p {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    color: var(--cor-botao-hover);
+}
 
-    margin-bottom: 30px;
+.contato h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
 }
 
 .contato form {
     display: flex;
-
     flex-direction: column;
-
-    gap: 10px;
+    gap: 12px;
 }
 
 .campo {
     display: flex;
-
     flex-direction: column;
-
     gap: 5px;
+}
+
+/* Campos do formulário */
+.campo label {
+    font-size: 14px;
 }
 
 .campo input,
 .campo textarea {
     padding: 12px;
-
     border: none;
-
-    font-family: Arial, Helvetica, sans-serif;
-
+    font-family: var(--fonte-base);
     font-size: 16px;
+    background-color: #1e1e1e;
+    color: var(--cor-texto-claro);
+    border-bottom: 2px solid #444;
+    transition: border-color var(--transicao-padrao);
+}
+
+/* Foco nos campos */
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-bottom-color: var(--cor-texto-claro);
+}
+
+.campo textarea {
+    resize: vertical;
 }
 
 .contato button {
-    margin-top: 10px;
-
+    margin-top: 8px;
     padding: 12px;
-
     border: none;
-
-    background-color: #fff;
-
-    color: #111;
-
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-fundo-escuro);
     font-size: 16px;
-
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color var(--transicao-padrao);
 }
 
 .contato button:hover {
-    background-color: #ddd;
+    background-color: var(--cor-botao-hover);
 }
+
+/* Mensagem de feedback após envio */
+.mensagem-feedback {
+    margin-top: 14px;
+    padding: 12px;
+    background-color: #1e3a1e;
+    color: #7dff7d;
+    font-size: 15px;
+    border-left: 4px solid #7dff7d;
+    display: none; /* oculta por padrão; JS exibe */
+}
+
 
 /* Rodapé */
 
 .rodape {
-    background-color: #000;
-
-    color: #fff;
-
+    background-color: var(--cor-fundo-preto);
+    color: var(--cor-texto-claro);
     text-align: center;
+    padding: 24px var(--espacamento-lateral);
+    font-size: 13px;
+    line-height: 1.7;
+}
 
-    padding: 25px;
+/* Separador entre itens do rodapé */
+.rodape p + p {
+    margin-top: 6px;
+    color: #aaa;
+}
 
-    font-size: 14px;
+
+/* Media query — ajuste para telas maiores (tablet e desktop) */
+
+@media (min-width: 768px) {
+
+    /* Cabeçalho em linha com logo centralizada */
+    .cabecalho {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 94px;
+        padding: 0 40px;
+        gap: 0;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .navegacao {
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+
+    .navegacao a {
+        font-size: 16px;
+    }
+
+    /* Hero maior */
+    .hero {
+        height: 610px;
+    }
+
+    .hero-conteudo {
+        top: 40px;
+        left: 8%;
+        max-width: 900px;
+    }
+
+    .hero-conteudo p {
+        font-size: 28px;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 46px;
+        line-height: 1.1;
+    }
+
+    /* Seções com mais espaçamento */
+    .comprar {
+        padding: 90px 8%;
+    }
+
+    .comprar-conteudo h2 {
+        font-size: 52px;
+        margin-bottom: 35px;
+    }
+
+    .comprar-conteudo p {
+        font-size: 20px;
+    }
+
+    .sobre-vintage {
+        padding: 70px 8%;
+    }
+
+    .sobre-vintage img {
+        margin-bottom: 50px;
+    }
+
+    .sobre-vintage-conteudo p {
+        font-size: 20px;
+    }
+
+    .contato {
+        padding: 70px 8%;
+    }
+
+    .contato h2 {
+        font-size: 36px;
+    }
 }
